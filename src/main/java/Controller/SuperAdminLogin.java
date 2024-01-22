@@ -29,7 +29,7 @@ public class SuperAdminLogin {
     public void submitBtnOnAction(ActionEvent actionEvent) {
         Stage stage = (Stage) txtusername.getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/MainDashboard.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/SuperAdminDashboard.fxml"))));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
