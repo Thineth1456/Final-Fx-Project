@@ -1,5 +1,8 @@
 package Controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
+import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -11,6 +14,11 @@ import java.io.IOException;
 public class CreateUserController {
 
     public AnchorPane createUser;
+    public JFXTextField contactnotxt;
+    public JFXTextField usernametxt;
+    public JFXTextField emailtxt;
+    public JFXPasswordField passwordtxt;
+    public JFXButton backbtnOnAction;
 
     public void bckbtnOnAction(ActionEvent actionEvent) {
         Stage stage = (Stage) createUser.getScene().getWindow();
