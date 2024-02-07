@@ -1,14 +1,15 @@
 package dto;
 
-import lombok.*;
 
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class CreateUserDto {
+
+public class RegisterUserDto {
     private String userId;
     private String name;
     private String contactNo;

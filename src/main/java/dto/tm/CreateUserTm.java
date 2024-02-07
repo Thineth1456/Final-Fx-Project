@@ -1,17 +1,19 @@
-package dto;
+package dto.tm;
 
+
+import javafx.scene.control.Button;
 import lombok.*;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class CreateUserDto {
+public class CreateUserTm  {
     private String userId;
     private String name;
     private String contactNo;
-    private String email;
-    private String password;
+    private Button btnR;
+    private Button btnD;
+
 }

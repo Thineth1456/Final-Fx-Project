@@ -34,6 +34,13 @@ public class SuperAdminDashboard {
     }
 
     public void regiUserbtnOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) SuAdminDash.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RegisterUser.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
