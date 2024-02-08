@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="Admindash" prefHeight="507.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashboardController">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="601.0" minWidth="10.0" prefWidth="577.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="174.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="342.0" minHeight="10.0" prefHeight="239.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="158.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <GridPane prefHeight="237.0" prefWidth="594.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="24.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="212.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="208.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="214.0" minHeight="155.0" prefHeight="214.0" />
+                        <RowConstraints minHeight="10.0" />
+                    </rowConstraints>
+                    <children>
+                        <JFXButton onAction="#viewReportsBtnOnAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #1273de;" text="View Reports" textAlignment="CENTER" textFill="#f8fafc" underline="true" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="CENTER" onAction="#createuserbtnOnAction" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #1273de;" text="Create User" textAlignment="CENTER" textFill="#f8fafc" underline="true" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </GridPane>
+                <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="601.0" minWidth="10.0" prefWidth="594.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Text fill="#1273de" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Dashboard" textAlignment="CENTER" wrappingWidth="388.13671875">
+                            <font>
+                                <Font name="System Bold" size="60.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </GridPane>
+                  <JFXButton onAction="#backbtnOnAction" prefHeight="50.0" prefWidth="52.0" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <graphic>
+                          <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@../image/backbtn.png" />
+                              </image>
+                          </ImageView>
+               </graphic>
+                  </JFXButton>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>

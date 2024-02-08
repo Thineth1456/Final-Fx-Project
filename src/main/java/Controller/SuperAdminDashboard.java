@@ -3,19 +3,22 @@ package Controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class SuperAdminDashboard {
 
-    public AnchorPane SuAdminDash;
+    public BorderPane SuperAdmindash;
+    public ImageView backbtnOnAction;
 
-    public void bckbtnOnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) SuAdminDash.getScene().getWindow();
+    public void backbtnOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) SuperAdmindash.getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/SuperAdminLogin.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/MainDashboard.fxml"))));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -23,7 +26,7 @@ public class SuperAdminDashboard {
     }
 
     public void createuserbtnOnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) SuAdminDash.getScene().getWindow();
+        Stage stage = (Stage) SuperAdmindash.getScene().getWindow();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/CreateUser.fxml"))));
             stage.show();
@@ -34,7 +37,7 @@ public class SuperAdminDashboard {
     }
 
     public void regiUserbtnOnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) SuAdminDash.getScene().getWindow();
+        Stage stage = (Stage) SuperAdmindash.getScene().getWindow();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/RegisterUser.fxml"))));
             stage.show();

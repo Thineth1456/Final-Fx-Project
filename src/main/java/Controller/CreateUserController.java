@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,13 +21,13 @@ import java.sql.SQLIntegrityConstraintViolationException;
 
 public class CreateUserController {
 
-    public AnchorPane createUser;
     public JFXTextField contactnotxt;
     public JFXTextField usernametxt;
     public JFXTextField emailtxt;
     public JFXPasswordField passwordtxt;
     public JFXButton backbtnOnAction;
     public JFXTextField userIdtxt;
+    public BorderPane CreateUser;
 
     private CreateUserBo createUserBo = new CreateUserBoImpl();
 
@@ -35,7 +36,7 @@ public class CreateUserController {
         userIdtxt.setEditable(false);
     }
     public void bckbtnOnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) createUser.getScene().getWindow();
+        Stage stage = (Stage) CreateUser.getScene().getWindow();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/SuperAdminDashboard.fxml"))));
             stage.show();
